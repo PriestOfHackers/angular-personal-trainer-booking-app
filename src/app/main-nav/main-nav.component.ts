@@ -19,12 +19,11 @@ export class MainNavComponent {
 
   constructor(private breakpointObserver: BreakpointObserver,private linkRouter:Router) {}
 
-
-  tablelist(){
-    this.linkRouter.navigate(['tablelist']);
+  gotoClasess(){
+    this.linkRouter.navigate(['Classes']);
   }
 
-  wiki(){
-    this.linkRouter.navigate(['wiki']);
+  gotoTrainers(){
+    this.linkRouter.navigate(['Trainers']);
   }
 }
