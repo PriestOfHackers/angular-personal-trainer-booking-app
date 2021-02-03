@@ -1,0 +1,28 @@
+<mat-card>
+</mat-card>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Paul Phoenix</mat-card-title>
+    <mat-card-subtitle>classes : Aerobics and Boxing</mat-card-subtitle>
+  </mat-card-header>
+        <mat-card-content>
+        <p>
+             Paul is a multi-talented trainer that loves challenging his students so that they can reach their full potential.
+        </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="picker.open()">Book a session </button>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </mat-card-actions>
+</mat-card>
+
+<div>
+  <app-booking-success-dailog [showDialog]="false"></app-booking-success-dailog>
+</div>
+
+<div>
+  <app-booking-unsuccessful-dialog [showDialog]="true"></app-booking-unsuccessful-dialog>
+</div>
