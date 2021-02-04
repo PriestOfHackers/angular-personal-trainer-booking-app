@@ -1,6 +1,4 @@
-<mat-card>
-</mat-card>
-<mat-card>
+<mat-card style="max-width: 500px;">
   <mat-card-header>
     <mat-card-title>Aerobics</mat-card-title>
     <mat-card-subtitle>Trainer : Paul Phoenix</mat-card-subtitle>
@@ -10,12 +8,7 @@
           Aerobics is a form of physical exercise that combines rhythmic aerobic exercise with stretching and strength training routines with the goal of improving all elements of fitness (flexibility, muscular strength, and cardio-vascular fitness).
         </p>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-raised-button (click)="picker.open()">Book a session </button>
-    <mat-form-field>
-      <input matInput [matDatepicker]="picker">
-      <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-    
+  <mat-card-actions align="end">
+    <button mat-raised-button (click)="gotoBooking()" >Book a session </button>
   </mat-card-actions>
 </mat-card>

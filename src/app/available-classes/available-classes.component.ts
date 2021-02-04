@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 interface Food {
@@ -12,9 +13,14 @@ interface Food {
 })
 export class AvailableClassesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private linkRouter:Router) { }
 
   ngOnInit(): void {
   }
+
+  gotoBooking(){
+    this.linkRouter.navigate(['Booking']);
+  }
+
 
 }

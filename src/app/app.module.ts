@@ -22,6 +22,8 @@ import { BookingSuccessDailogComponent } from './booking-success-dailog/booking-
 import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { BookingUnsuccessfulDialogComponent } from './booking-unsuccessful-dialog/booking-unsuccessful-dialog.component';
 import { SessionBookingService } from './session-booking.service';
+import { BookingPageComponent } from './booking-page/booking-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SessionBookingService } from './session-booking.service';
     AvailableClassesComponent,
     AvailableTrainersComponent,
     BookingSuccessDailogComponent,
-    BookingUnsuccessfulDialogComponent
+    BookingUnsuccessfulDialogComponent,
+    BookingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,8 @@ import { SessionBookingService } from './session-booking.service';
     MatInputModule,
     MatNativeDateModule,
     MatDialogModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [{
     provide: MatDialogRef,
