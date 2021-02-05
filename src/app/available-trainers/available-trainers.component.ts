@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SessionBookingService } from '../session-booking.service';
+import { SessionBookingService , Trainer} from '../session-booking.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-available-trainers',
@@ -9,12 +9,14 @@ import { Router } from '@angular/router';
 })
 export class AvailableTrainersComponent implements OnInit {
 
+  trainers: Trainer[];
+
   constructor(private sessionBooking: SessionBookingService,private linkRouter:Router) { }
 
   ngOnInit(): void {
-    this.sessionBooking.testMockService();
 
-    this.sessionBooking.getTrainers();
+    this.trainers = this.sessionBooking.getTrainers();
+    
   }
 
   gotoBooking(){

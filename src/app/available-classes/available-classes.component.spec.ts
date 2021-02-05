@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AvailableClassesComponent } from './available-classes.component';
 
 describe('AvailableClassesComponent', () => {
@@ -18,7 +17,6 @@ describe('AvailableClassesComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });

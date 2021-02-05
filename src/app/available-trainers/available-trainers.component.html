@@ -1,11 +1,11 @@
-<mat-card style=" max-width: 500px;">
+<mat-card style=" max-width: 500px;"   *ngFor= "let trainer of trainers">
   <mat-card-header>
-    <mat-card-title>Paul Phoenix</mat-card-title>
+    <mat-card-title>{{trainer.trainerName}}</mat-card-title>
     <mat-card-subtitle>classes : Aerobics and Boxing</mat-card-subtitle>
   </mat-card-header>
         <mat-card-content>
         <p>
-             Paul is a multi-talented trainer that loves challenging his students so that they can reach their full potential.
+          {{trainer.personalDescription}}
         </p>
   </mat-card-content>
   <mat-card-actions align="end">
