@@ -14,7 +14,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AvailableClassesComponent } from './available-classes/available-classes.component';
 import { MatCardModule } from '@angular/material/card';
 import { AvailableTrainersComponent } from './available-trainers/available-trainers.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -24,6 +24,7 @@ import { BookingUnsuccessfulDialogComponent } from './booking-unsuccessful-dialo
 import { SessionBookingService } from './session-booking.service';
 import { BookingPageComponent } from './booking-page/booking-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [

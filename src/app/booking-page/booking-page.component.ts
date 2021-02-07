@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder , FormGroup, Validators} from '@angular/forms';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-booking-page',
@@ -8,7 +9,11 @@ import { FormBuilder , FormGroup, Validators} from '@angular/forms';
 })
 export class BookingPageComponent implements OnInit {
 
+  maxDate = new Date(); 
+  minDate = new Date();
 
+  showSuccesDialog : boolean;
+  showFailedDialog : boolean;
   profileForm : FormGroup;
   formSubmitted : boolean;
 
@@ -24,9 +29,16 @@ export class BookingPageComponent implements OnInit {
       password : ['' , Validators.required],
       address :['' , Validators.required],
     });
+
+    this.showSuccesDialog = true;
+    this.showFailedDialog = true;
+
+    this.maxDate.setDate(this.maxDate.getDate() + 1);
   }
 
   onSubmit(){
-    this.formSubmitted = true;
+    this.showSuccesDialog = true;
+    location.reload();
+    console.log(" onSubmit()");
   }
 }

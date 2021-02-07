@@ -8,23 +8,25 @@ import {MatDialog ,MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog
 })
 export class BookingSuccessDailogComponent implements OnInit {
 
-  openDialog() {
-    //this.dialog.open(DialogElementsExampleDialog);
-    const dialogRef = this.dialog.open(OpenDialog);
+  @Input() showDialog: boolean;
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
   constructor(public dialog: MatDialog,   
     private dialogRef: MatDialogRef<OpenDialog>,
     ) { }
-  @Input() showDialog: boolean;
+  
 
   ngOnInit(): void {
     if(this.showDialog){
           this.openDialog();
     }
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(OpenDialog);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }
