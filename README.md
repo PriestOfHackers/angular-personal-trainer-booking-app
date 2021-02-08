@@ -1,27 +1,40 @@
-# PersonaltrainerBooking
+# angular-personal-trainer-booking-app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
-## Development server
+CONTENTS OF THIS FILE
+---------------------
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ * Introduction
+ * Installation
+ * Plugins and third-party Libraries
+ * Maintainers
+ 
+INTRODUCTION
+------------
 
-## Code scaffolding
+This a web application built using angular to simulate how a customer would book sessions for personal training at the gym.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ 
+INSTALLATION
+------------
+ 
+ * pull this repo through the master branch at (https://github.com/PriestOfHackers/angular-personal-trainer-booking-app/tree/master)
 
-## Build
+ * Then if you have node and angular installed already you can do a browse the project folder and run a "ng serve" in the command line.
+   
+   
+PLUGINGS AND THIRD PARTY LIBRARIES
+-----------------------------------
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The core third party library we used on this project is angular material namely for the side-nav/nav bar , the date picker , the cards and the dialogs used in the project.
 
-## Running unit tests
+for more visit(https://material.angular.io/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+MAINTAINERS
+-----------
 
-## Running end-to-end tests
+Current maintainers:
+ * Paseka Monyeki(PriestOfHackers) - https://github.com/PriestOfHackers
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
