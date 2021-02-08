@@ -1,4 +1,4 @@
-<mat-card style="max-width: 500px;" *ngFor= "let class of classes">
+<mat-card class="custom" *ngFor= "let class of classes">
   <mat-card-header>
     <mat-card-title>{{class.className}}</mat-card-title>
     <mat-card-subtitle>Trainer : Paul Phoenix</mat-card-subtitle>
@@ -12,3 +12,6 @@
     <button mat-raised-button (click)="gotoBooking()" >Book a session </button>
   </mat-card-actions>
 </mat-card>
+
+<div style="padding-bottom: 50px;">
+<div>

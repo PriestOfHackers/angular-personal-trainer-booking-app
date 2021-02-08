@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder , FormGroup, Validators} from '@angular/forms';
 import * as moment from 'moment';
+import {MatDialog ,MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-booking-page',
@@ -17,7 +18,9 @@ export class BookingPageComponent implements OnInit {
   profileForm : FormGroup;
   formSubmitted : boolean;
 
-  constructor(private formbuilder : FormBuilder) { }
+  constructor(private formbuilder : FormBuilder ,
+    public dialog: MatDialog,   
+    private dialogRef: MatDialogRef<OpenDialog>,) { }
 
   ngOnInit(): void {
     this.profileForm = this.formbuilder.group({
@@ -38,7 +41,28 @@ export class BookingPageComponent implements OnInit {
 
   onSubmit(){
     this.showSuccesDialog = true;
-    location.reload();
+    this. openDialog();
     console.log(" onSubmit()");
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(OpenDialog);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+}
+
+
+
+@Component({
+  selector: 'app-open-dailog',
+  templateUrl: 'open-dialog.html',
+})
+export class OpenDialog {
+
+  refreshPage(){
+    //location.reload();
   }
 }

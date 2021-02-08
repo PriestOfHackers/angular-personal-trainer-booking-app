@@ -3,3 +3,8 @@
     width: 60%;
     padding: 10px;
 }
+
+.custom.mat-card{
+    max-width: 500px; 
+    margin: 20px;
+}
